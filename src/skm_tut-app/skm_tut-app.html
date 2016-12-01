@@ -1,2 +1,29 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
+<dom-module id="skm_tut-app">
+  <template>
+    <style>
+      div {
+        color: red;
+      }
+    </style>
+
+
+    Hello, I am Batman!
+    <div>
+      Cześć
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: "skm_tut-app",
+      ready: function () {
+        console.log("I'm ready Robin!")
+      }
+    })
+
+
+  </script>
+</dom-module>
