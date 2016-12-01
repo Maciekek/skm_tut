@@ -21,14 +21,14 @@
     <div>
       FullName: [[fullName]]
     </div>
-
+    <button on-tap="importantFunc">Click me NOW!</button>
 
   </template>
 
   <script>
     Polymer({
       is: "skm_tut-app",
-
+      behaviors : [Polymer.myBehavior],
 
       properties: {
         firstName: {
