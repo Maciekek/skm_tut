@@ -11,7 +11,7 @@
 
     First Name: <input is="iron-input" bind-value="{{firstName}}">
     Last Name:  <input is="iron-input" bind-value="{{lastName}}">
-
+    <button on-tap="submit">Submit</button>
 
   </template>
 
@@ -36,6 +36,10 @@
 
       ready: function () {
         console.log("I'm ready Robin!")
+      },
+
+      submit: function() {
+        this.fire("input-form-submit", {firstName: this.firstName, lastName: this.lastName});
       }
 
     })
