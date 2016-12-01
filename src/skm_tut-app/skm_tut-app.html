@@ -18,6 +18,12 @@
       Last: [[lastName]]
     </div>
 
+    <div>
+        FullName: [[fullName]]
+    </div>
+
+
+
   </template>
 
   <script>
@@ -33,12 +39,25 @@
         lastName :{
           type: String,
           value: ""
+        },
+        fullName: {
+          type: String,
+          computed: "_getFullName(firstName, lastName)"
         }
       },
 
+      observers: [
+        '_firstNameChanged(firstName,lastName)'
+      ],
 
       ready: function () {
         console.log("I'm ready Robin!")
+      },
+      _firstNameChanged: function() {
+        console.log("_firstNameChanged ", this.firstName)
+      },
+      _getFullName: function() {
+        return this.firstName + " " + this.lastName;
       }
 
     })
