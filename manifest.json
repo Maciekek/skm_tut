@@ -1,0 +1,6 @@
+{
+  "name": "skm_tut",
+  "short_name": "skm_tut",
+  "start_url": "/",
+  "display": "standalone"
+}
