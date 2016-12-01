@@ -1,38 +1,35 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="./inputs-form.html">
-<dom-module id="skm_tut-app">
+<link rel="import" href="../../bower_components/iron-input/iron-input.html">
+
+
+<dom-module id="inputs-form">
   <template>
     <style>
-      div {
-        color: red;
-      }
+
     </style>
 
 
-    <inputs-form first-name="{{firstName}}" last-name="{{lastName}}"></inputs-form>
+    First Name: <input is="iron-input" bind-value="{{firstName}}">
+    Last Name:  <input is="iron-input" bind-value="{{lastName}}">
 
-    <div>
-      First: [[firstName]]
-    </div>
-    <div>
-      Last: [[lastName]]
-    </div>
 
   </template>
 
   <script>
     Polymer({
-      is: "skm_tut-app",
+      is: "inputs-form",
 
 
       properties: {
         firstName :{
           type: String,
-          value: ""
+          value: "",
+          notify: true
         },
         lastName :{
           type: String,
-          value: ""
+          value: "",
+          notify: true
         }
       },
 
